@@ -1,0 +1,1 @@
+ST-LINK_CLI.exe -P build/cnc_tester.bin 0x08000000 -Rst

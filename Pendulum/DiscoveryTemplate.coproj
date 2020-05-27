@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.6" name="DiscoveryTemplate">
+  <Target name="DiscoveryTemplate" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="344" chipName="STM32F407VG" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value="-std=gnu99"/>
+        <Option name="SupportCPlusplus" value="1"/>
+        <Option name="FPU" value="2"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F407VG"/>
+          <Define name="STM32F4XX"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+          <Define name="__FPU_USED"/>
+          <Define name="SUPPORT_CPLUSPLUS"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="nostartfiles" value="0"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Retarget"/>
+        <Option name="UserEditLinker" value=""/>
+        <LinkedLibraries>
+          <Libset dir="src\stemwin\" libs="stemwin526_cm4_gcc"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00100000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00020000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="0x00010000" startValue="0x10000000"/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/coocox/coide/configuration/programdata/discoverytemplate/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="DiscoveryTemplate"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="2M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F4xx_1024.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="31" name="Retarget printf" path="" type="2"/>
+    <Component id="33" name="Semihosting" path="" type="2"/>
+    <Component id="54" name="M4 CMSIS Core" path="" type="2"/>
+    <Component id="500" name="CMSIS BOOT" path="" type="2"/>
+    <Component id="501" name="RCC" path="" type="2"/>
+    <Component id="502" name="PWR" path="" type="2"/>
+    <Component id="504" name="GPIO" path="" type="2"/>
+    <Component id="505" name="EXTI" path="" type="2"/>
+    <Component id="507" name="IWDG" path="" type="2"/>
+    <Component id="509" name="SPI" path="" type="2"/>
+    <Component id="511" name="DMA" path="" type="2"/>
+    <Component id="512" name="FLASH" path="" type="2"/>
+    <Component id="513" name="TIM" path="" type="2"/>
+    <Component id="514" name="ADC" path="" type="2"/>
+    <Component id="516" name="FSMC" path="" type="2"/>
+    <Component id="517" name="USART" path="" type="2"/>
+    <Component id="518" name="RNG" path="" type="2"/>
+    <Component id="520" name="SDIO" path="" type="2"/>
+    <Component id="524" name="MISC" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="cmsis_lib/source/stm32f4xx_usart.c" path="cmsis_lib/source/stm32f4xx_usart.c" type="1"/>
+    <File name="Demo/GUIDEMO_Automotive.c" path="Demo/GUIDEMO_Automotive.c" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Lin_Opt_16.h" path="src/STemWIN/inc/GUIDRV_Lin_Opt_16.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_usart.h" path="cmsis_lib/include/stm32f4xx_usart.h" type="1"/>
+    <File name="src" path="" type="2"/>
+    <File name="src/STemWIN/inc/HEADER.h" path="src/STemWIN/inc/HEADER.h" type="1"/>
+    <File name="src/STemWIN/inc/LISTWHEEL.h" path="src/STemWIN/inc/LISTWHEEL.h" type="1"/>
+    <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
+    <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
+    <File name="src/FAST_ILI9328/ILI9327.h" path="src/FAST_ILI9328/ILI9327.h" type="1"/>
+    <File name="src/STemWIN/inc/HEADER_Private.h" path="src/STemWIN/inc/HEADER_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/WM.h" path="src/STemWIN/inc/WM.h" type="1"/>
+    <File name="src/STemWIN/inc/CHOOSEFILE.h" path="src/STemWIN/inc/CHOOSEFILE.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_iwdg.c" path="cmsis_lib/source/stm32f4xx_iwdg.c" type="1"/>
+    <File name="FreeRTOS/Source/port.c" path="FreeRTOS/Source/port.c" type="1"/>
+    <File name="src/STemWIN/inc/GUI_SetOrientation.h" path="src/STemWIN/inc/GUI_SetOrientation.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_HOOK.h" path="src/STemWIN/inc/GUI_HOOK.h" type="1"/>
+    <File name="FreeRTOS/Source/include/portable.h" path="FreeRTOS/Source/include/portable.h" type="1"/>
+    <File name="Demo/GUIDEMO_Skinning.c" path="Demo/GUIDEMO_Skinning.c" type="1"/>
+    <File name="src/STemWIN" path="" type="2"/>
+    <File name="FreeRTOS/Source/croutine.c" path="FreeRTOS/Source/croutine.c" type="1"/>
+    <File name="src/STemWIN/GUIConf.h" path="src/STemWIN/GUIConf.h" type="1"/>
+    <File name="src/STemWIN/inc/KNOB.h" path="src/STemWIN/inc/KNOB.h" type="1"/>
+    <File name="src/FAST_ILI9328/ILI9327.c" path="src/FAST_ILI9328/ILI9327.c" type="1"/>
+    <File name="Demo/GUIDEMO_Conf.c" path="Demo/GUIDEMO_Conf.c" type="1"/>
+    <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
+    <File name="FreeRTOS/Source/timers.c" path="FreeRTOS/Source/timers.c" type="1"/>
+    <File name="FreeRTOS/Source/include" path="" type="2"/>
+    <File name="src/STemWIN/inc/ICONVIEW.h" path="src/STemWIN/inc/ICONVIEW.h" type="1"/>
+    <File name="src/STemWIN/inc/CHECKBOX_Private.h" path="src/STemWIN/inc/CHECKBOX_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_TemplateI.h" path="src/STemWIN/inc/GUIDRV_TemplateI.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_FlexColor.h" path="src/STemWIN/inc/GUIDRV_FlexColor.h" type="1"/>
+    <File name="FreeRTOS/Source/include/task.h" path="FreeRTOS/Source/include/task.h" type="1"/>
+    <File name="stdio" path="" type="2"/>
+    <File name="string.h" path="string.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_rcc.c" path="cmsis_lib/source/stm32f4xx_rcc.c" type="1"/>
+    <File name="src/STemWIN/inc/IMAGE_Private.h" path="src/STemWIN/inc/IMAGE_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/MULTIEDIT.h" path="src/STemWIN/inc/MULTIEDIT.h" type="1"/>
+    <File name="src/STemWIN/inc/LCD_SIM.h" path="src/STemWIN/inc/LCD_SIM.h" type="1"/>
+    <File name="src/STemWIN/inc/LISTBOX.h" path="src/STemWIN/inc/LISTBOX.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Lin_Private.h" path="src/STemWIN/inc/GUIDRV_Lin_Private.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_pwr.c" path="cmsis_lib/source/stm32f4xx_pwr.c" type="1"/>
+    <File name="src/STemWIN/inc/GUI_Debug.h" path="src/STemWIN/inc/GUI_Debug.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_GIF_Private.h" path="src/STemWIN/inc/GUI_GIF_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/SLIDER_Private.h" path="src/STemWIN/inc/SLIDER_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_ConfDefaults.h" path="src/STemWIN/inc/GUI_ConfDefaults.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Lin_Opt_24.h" path="src/STemWIN/inc/GUIDRV_Lin_Opt_24.h" type="1"/>
+    <File name="src/STemWIN/inc/DIALOG_Intern.h" path="src/STemWIN/inc/DIALOG_Intern.h" type="1"/>
+    <File name="src/STemWIN/inc/Global.h" path="src/STemWIN/inc/Global.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_spi.h" path="cmsis_lib/include/stm32f4xx_spi.h" type="1"/>
+    <File name="src/STemWIN/inc/CHECKBOX.h" path="src/STemWIN/inc/CHECKBOX.h" type="1"/>
+    <File name="Demo/GUIDEMO_TransparentDialog.c" path="Demo/GUIDEMO_TransparentDialog.c" type="1"/>
+    <File name="cmsis_lib" path="" type="2"/>
+    <File name="src/GUIConf.c" path="src/GUIConf.c" type="1"/>
+    <File name="FreeRTOS/Source/include/event_groups.h" path="FreeRTOS/Source/include/event_groups.h" type="1"/>
+    <File name="cmsis_lib/include/misc.h" path="cmsis_lib/include/misc.h" type="1"/>
+    <File name="Demo/GUIDEMO_IconView.c" path="Demo/GUIDEMO_IconView.c" type="1"/>
+    <File name="FreeRTOS/Source/include/projdefs.h" path="FreeRTOS/Source/include/projdefs.h" type="1"/>
+    <File name="main.c" path="main.c" type="1"/>
+    <File name="src/XPT2046" path="" type="2"/>
+    <File name="Demo/GUIDEMO_BarGraph.c" path="Demo/GUIDEMO_BarGraph.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_gpio.c" path="cmsis_lib/source/stm32f4xx_gpio.c" type="1"/>
+    <File name="src/STemWIN/inc/WIDGET.h" path="src/STemWIN/inc/WIDGET.h" type="1"/>
+    <File name="Demo/GUIDEMO_Start.c" path="Demo/GUIDEMO_Start.c" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_dma.c" path="cmsis_lib/source/stm32f4xx_dma.c" type="1"/>
+    <File name="Demo/GUIDEMO_Treeview.c" path="Demo/GUIDEMO_Treeview.c" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="FreeRTOS/Source/include/mpu_wrappers.h" path="FreeRTOS/Source/include/mpu_wrappers.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_fsmc.c" path="cmsis_lib/source/stm32f4xx_fsmc.c" type="1"/>
+    <File name="FreeRTOS/Source/include/timers.h" path="FreeRTOS/Source/include/timers.h" type="1"/>
+    <File name="src/STemWIN/inc/TREEVIEW.h" path="src/STemWIN/inc/TREEVIEW.h" type="1"/>
+    <File name="src/STemWIN/inc/TEXT_Private.h" path="src/STemWIN/inc/TEXT_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/SPINBOX.h" path="src/STemWIN/inc/SPINBOX.h" type="1"/>
+    <File name="src/STemWIN/inc/MENU.h" path="src/STemWIN/inc/MENU.h" type="1"/>
+    <File name="Demo/GUIDEMO_Speedometer.c" path="Demo/GUIDEMO_Speedometer.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_adc.c" path="cmsis_lib/source/stm32f4xx_adc.c" type="1"/>
+    <File name="src/FAST_ILI9328/DefaultFonts.c" path="src/FAST_ILI9328/DefaultFonts.c" type="1"/>
+    <File name="src/NRF24L01/NRF24L01.h" path="src/NRF24L01/NRF24L01.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_JPEG_Private.h" path="src/STemWIN/inc/GUI_JPEG_Private.h" type="1"/>
+    <File name="Demo/GUIDEMO_AntialiasedText.c" path="Demo/GUIDEMO_AntialiasedText.c" type="1"/>
+    <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_NoOpt_1_8.h" path="src/STemWIN/inc/GUIDRV_NoOpt_1_8.h" type="1"/>
+    <File name="src/STemWIN/inc/MESSAGEBOX.h" path="src/STemWIN/inc/MESSAGEBOX.h" type="1"/>
+    <File name="FreeRTOS/Source" path="" type="2"/>
+    <File name="src/STemWIN/inc/RADIO_Private.h" path="src/STemWIN/inc/RADIO_Private.h" type="1"/>
+    <File name="Demo/GUIDEMO_ColorBar.c" path="Demo/GUIDEMO_ColorBar.c" type="1"/>
+    <File name="Demo/GUIDEMO_Resource.c" path="Demo/GUIDEMO_Resource.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_iwdg.h" path="cmsis_lib/include/stm32f4xx_iwdg.h" type="1"/>
+    <File name="src/STemWIN/inc/LCD.h" path="src/STemWIN/inc/LCD.h" type="1"/>
+    <File name="src/STemWIN/inc/LCD_Private.h" path="src/STemWIN/inc/LCD_Private.h" type="1"/>
+    <File name="FreeRTOS/Source/include/queue.h" path="FreeRTOS/Source/include/queue.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_sdio.c" path="cmsis_lib/source/stm32f4xx_sdio.c" type="1"/>
+    <File name="src/STemWIN/inc/SLIDER.h" path="src/STemWIN/inc/SLIDER.h" type="1"/>
+    <File name="src/STemWIN/inc/LISTVIEW.h" path="src/STemWIN/inc/LISTVIEW.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
+    <File name="FreeRTOS/Source/include/list.h" path="FreeRTOS/Source/include/list.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_DCache_Private.h" path="src/STemWIN/inc/GUIDRV_DCache_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Lin_Opt_32.h" path="src/STemWIN/inc/GUIDRV_Lin_Opt_32.h" type="1"/>
+    <File name="Demo/GUIDEMO_WashingMachine.c" path="Demo/GUIDEMO_WashingMachine.c" type="1"/>
+    <File name="src/STemWIN/inc/MENU_Private.h" path="src/STemWIN/inc/MENU_Private.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
+    <File name="src/STemWIN/inc/TREEVIEW_Private.h" path="src/STemWIN/inc/TREEVIEW_Private.h" type="1"/>
+    <File name="FreeRTOS/Source/include/StackMacros.h" path="FreeRTOS/Source/include/StackMacros.h" type="1"/>
+    <File name="src/STemWIN/inc/MULTIPAGE.h" path="src/STemWIN/inc/MULTIPAGE.h" type="1"/>
+    <File name="Demo/GUIDEMO_RadialMenu.c" path="Demo/GUIDEMO_RadialMenu.c" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_rng.h" path="cmsis_lib/include/stm32f4xx_rng.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_DCache.h" path="src/STemWIN/inc/GUIDRV_DCache.h" type="1"/>
+    <File name="src/STemWIN/inc/IMAGE.h" path="src/STemWIN/inc/IMAGE.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_FontIntern.h" path="src/STemWIN/inc/GUI_FontIntern.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_flash.h" path="cmsis_lib/include/stm32f4xx_flash.h" type="1"/>
+    <File name="FreeRTOS/Source/tasks.c" path="FreeRTOS/Source/tasks.c" type="1"/>
+    <File name="src/GUIDRV_ILI9327.c" path="GUIDRV_ILI9327.c" type="1"/>
+    <File name="src/STemWIN/inc/GUI_SIM_Win32.h" path="src/STemWIN/inc/GUI_SIM_Win32.h" type="1"/>
+    <File name="src/XPT2046/touch.h" path="src/XPT2046/touch.h" type="1"/>
+    <File name="src/FAST_ILI9328" path="" type="2"/>
+    <File name="mainTask.c" path="mainTask.c" type="1"/>
+    <File name="src/STemWIN/inc/FRAMEWIN_Private.h" path="src/STemWIN/inc/FRAMEWIN_Private.h" type="1"/>
+    <File name="Demo/GUIDEMO_Bitmap.c" path="Demo/GUIDEMO_Bitmap.c" type="1"/>
+    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_spi.c" path="cmsis_lib/source/stm32f4xx_spi.c" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_TemplateI_Private.h" path="src/STemWIN/inc/GUIDRV_TemplateI_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/EDIT.h" path="src/STemWIN/inc/EDIT.h" type="1"/>
+    <File name="src/STemWIN/inc/DIALOG.h" path="src/STemWIN/inc/DIALOG.h" type="1"/>
+    <File name="src/STemWIN/inc" path="" type="2"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Generic.h" path="src/STemWIN/inc/GUIDRV_Generic.h" type="1"/>
+    <File name="src/STemWIN/inc/LISTBOX_Private.h" path="src/STemWIN/inc/LISTBOX_Private.h" type="1"/>
+    <File name="Demo/GUIDEMO_ImageFlow.c" path="Demo/GUIDEMO_ImageFlow.c" type="1"/>
+    <File name="Demo/GUIDEMO_ZoomAndRotate.c" path="Demo/GUIDEMO_ZoomAndRotate.c" type="1"/>
+    <File name="FreeRTOS/Source/list.c" path="FreeRTOS/Source/list.c" type="1"/>
+    <File name="src/XPT2046/touch.c" path="src/XPT2046/touch.c" type="1"/>
+    <File name="src/STemWIN/inc/WM_GUI.h" path="src/STemWIN/inc/WM_GUI.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
+    <File name="Demo/GUIDEMO.c" path="Demo/GUIDEMO.c" type="1"/>
+    <File name="src/STemWIN/inc/GUI_ARRAY.h" path="src/STemWIN/inc/GUI_ARRAY.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_pwr.h" path="cmsis_lib/include/stm32f4xx_pwr.h" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
+    <File name="Demo/GUIDEMO_Intro.c" path="Demo/GUIDEMO_Intro.c" type="1"/>
+    <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
+    <File name="Demo/GUIDEMO_Graph.c" path="Demo/GUIDEMO_Graph.c" type="1"/>
+    <File name="FreeRTOS/Source/include/semphr.h" path="FreeRTOS/Source/include/semphr.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_adc.h" path="cmsis_lib/include/stm32f4xx_adc.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
+    <File name="src/STemWIN/inc/SCROLLBAR_Private.h" path="src/STemWIN/inc/SCROLLBAR_Private.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_rng.c" path="cmsis_lib/source/stm32f4xx_rng.c" type="1"/>
+    <File name="src/STemWIN/inc/BUTTON_Private.h" path="src/STemWIN/inc/BUTTON_Private.h" type="1"/>
+    <File name="src/LCDConf.c" path="LCDConf.c" type="1"/>
+    <File name="src/STemWIN/inc/MULTIPAGE_Private.h" path="src/STemWIN/inc/MULTIPAGE_Private.h" type="1"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="src/STemWIN/inc/CHOOSECOLOR.h" path="src/STemWIN/inc/CHOOSECOLOR.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_VNC.h" path="src/STemWIN/inc/GUI_VNC.h" type="1"/>
+    <File name="src/STemWIN/inc/LISTWHEEL_Private.h" path="src/STemWIN/inc/LISTWHEEL_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/GUITDRV_ADS7846.h" path="src/STemWIN/inc/GUITDRV_ADS7846.h" type="1"/>
+    <File name="GraphExmpl.c" path="GraphExmpl.c" type="1"/>
+    <File name="Demo/GUIDEMO_Speed.c" path="Demo/GUIDEMO_Speed.c" type="1"/>
+    <File name="src/GUIDRV_ILI9327.h" path="../DiscoveryTemplate_FSMC_LCD/GUIDRV_ILI9327.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Template.h" path="src/STemWIN/inc/GUIDRV_Template.h" type="1"/>
+    <File name="FreeRTOS/Source/heap_2.c" path="FreeRTOS/Source/heap_2.c" type="1"/>
+    <File name="src/STemWIN/inc/RADIO.h" path="src/STemWIN/inc/RADIO.h" type="1"/>
+    <File name="FreeRTOS/Source/queue.c" path="FreeRTOS/Source/queue.c" type="1"/>
+    <File name="FreeRTOS/Source/include/croutine.h" path="FreeRTOS/Source/include/croutine.h" type="1"/>
+    <File name="src/STemWIN/inc/SPINBOX_Private.h" path="src/STemWIN/inc/SPINBOX_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/SCROLLBAR.h" path="src/STemWIN/inc/SCROLLBAR.h" type="1"/>
+    <File name="src/STemWIN/inc/TEXT.h" path="src/STemWIN/inc/TEXT.h" type="1"/>
+    <File name="semihosting/sh_cmd.s" path="semihosting/sh_cmd.s" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_flash.c" path="cmsis_lib/source/stm32f4xx_flash.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
+    <File name="semihosting/semihosting.c" path="semihosting/semihosting.c" type="1"/>
+    <File name="FreeRTOS/Source/portmacro.h" path="FreeRTOS/Source/portmacro.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_Type.h" path="src/STemWIN/inc/GUI_Type.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_SetOrientationCX.h" path="src/STemWIN/inc/GUI_SetOrientationCX.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_FlexColor_Private.h" path="src/STemWIN/inc/GUIDRV_FlexColor_Private.h" type="1"/>
+    <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
+    <File name="string.c" path="string.c" type="1"/>
+    <File name="src/NRF24L01/NRF24L01.c" path="src/NRF24L01/NRF24L01.c" type="1"/>
+    <File name="Demo/GUIDEMO_Listview.c" path="Demo/GUIDEMO_Listview.c" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Lin.h" path="src/STemWIN/inc/GUIDRV_Lin.h" type="1"/>
+    <File name="src/STemWIN/inc/CALENDAR.h" path="src/STemWIN/inc/CALENDAR.h" type="1"/>
+    <File name="cmsis_lib/source" path="" type="2"/>
+    <File name="src/STemWIN/inc/LCD_ConfDefaults.h" path="src/STemWIN/inc/LCD_ConfDefaults.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_SPRITE_Private.h" path="src/STemWIN/inc/GUI_SPRITE_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/FRAMEWIN.h" path="src/STemWIN/inc/FRAMEWIN.h" type="1"/>
+    <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
+    <File name="Demo" path="" type="2"/>
+    <File name="src/STemWIN/inc/GRAPH.h" path="src/STemWIN/inc/GRAPH.h" type="1"/>
+    <File name="src/STemWIN/inc/WINDOW_Private.h" path="src/STemWIN/inc/WINDOW_Private.h" type="1"/>
+    <File name="src/GUI_X_FreeRTOS.c" path="src/GUI_X_FreeRTOS.c" type="1"/>
+    <File name="Demo/GUIDEMO_Cursor.c" path="Demo/GUIDEMO_Cursor.c" type="1"/>
+    <File name="src/STemWIN/inc/LCD_Protected.h" path="src/STemWIN/inc/LCD_Protected.h" type="1"/>
+    <File name="src/STemWIN/inc/GRAPH_Private.h" path="src/STemWIN/inc/GRAPH_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/DROPDOWN_Private.h" path="src/STemWIN/inc/DROPDOWN_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/EDIT_Private.h" path="src/STemWIN/inc/EDIT_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_ARRAY_Private.h" path="src/STemWIN/inc/GUI_ARRAY_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_Private.h" path="src/STemWIN/inc/GUI_Private.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_sdio.h" path="cmsis_lib/include/stm32f4xx_sdio.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Lin_Opt_8.h" path="src/STemWIN/inc/GUIDRV_Lin_Opt_8.h" type="1"/>
+    <File name="semihosting" path="" type="2"/>
+    <File name="src/STemWIN/inc/PROGBAR_Private.h" path="src/STemWIN/inc/PROGBAR_Private.h" type="1"/>
+    <File name="Demo/GUIDEMO_VScreen.c" path="Demo/GUIDEMO_VScreen.c" type="1"/>
+    <File name="src/STemWIN/inc/GUI_BMP_Private.h" path="src/STemWIN/inc/GUI_BMP_Private.h" type="1"/>
+    <File name="src/NRF24L01" path="" type="2"/>
+    <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
+    <File name="src/STemWIN/inc/DROPDOWN.h" path="src/STemWIN/inc/DROPDOWN.h" type="1"/>
+    <File name="src/STemWIN/inc/LISTVIEW_Private.h" path="src/STemWIN/inc/LISTVIEW_Private.h" type="1"/>
+    <File name="Demo/GUIDEMO_Fading.c" path="Demo/GUIDEMO_Fading.c" type="1"/>
+    <File name="src/STemWIN/inc/KNOB_Private.h" path="src/STemWIN/inc/KNOB_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/ICONVIEW_Private.h" path="src/STemWIN/inc/ICONVIEW_Private.h" type="1"/>
+    <File name="src/STemWIN/inc/BUTTON.h" path="src/STemWIN/inc/BUTTON.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_dma.h" path="cmsis_lib/include/stm32f4xx_dma.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_tim.c" path="cmsis_lib/source/stm32f4xx_tim.c" type="1"/>
+    <File name="FreeRTOS/Source/include/FreeRTOS.h" path="FreeRTOS/Source/include/FreeRTOS.h" type="1"/>
+    <File name="Demo/GUIDEMO.h" path="Demo/GUIDEMO.h" type="1"/>
+    <File name="syscalls" path="" type="2"/>
+    <File name="src/STemWIN/inc/GUI.h" path="src/STemWIN/inc/GUI.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_fsmc.h" path="cmsis_lib/include/stm32f4xx_fsmc.h" type="1"/>
+    <File name="FreeRTOS/Source/event_groups.c" path="FreeRTOS/Source/event_groups.c" type="1"/>
+    <File name="src/STemWIN/inc/WM_Intern.h" path="src/STemWIN/inc/WM_Intern.h" type="1"/>
+    <File name="cmsis_lib/include" path="" type="2"/>
+    <File name="semihosting/semihosting.h" path="semihosting/semihosting.h" type="1"/>
+    <File name="src/STemWIN/inc/GUI_Version.h" path="src/STemWIN/inc/GUI_Version.h" type="1"/>
+    <File name="FreeRTOS" path="" type="2"/>
+    <File name="FreeRTOSConfig.h" path="FreeRTOSConfig.h" type="1"/>
+    <File name="src/STemWIN/inc/GUIDRV_Dist.h" path="src/STemWIN/inc/GUIDRV_Dist.h" type="1"/>
+    <File name="src/STemWIN/inc/PROGBAR.h" path="src/STemWIN/inc/PROGBAR.h" type="1"/>
+  </Files>
+</Project>
